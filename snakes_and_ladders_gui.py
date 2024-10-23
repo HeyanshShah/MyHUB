@@ -1,17 +1,15 @@
 import tkinter as tk
 import random
-
-# Define the game board with snakes and ladders
 board = {
-    3: 22,   # Ladder from 3 to 22
-    5: 8,    # Ladder from 5 to 8
-    11: 26,  # Ladder from 11 to 26
-    20: 29,  # Ladder from 20 to 29
-    17: 4,   # Snake from 17 to 4
-    19: 7,   # Snake from 19 to 7
-    27: 1,   # Snake from 27 to 1
-    21: 9,   # Snake from 21 to 9
-    28: 15   # Snake from 28 to 15
+    3: 22,   
+    5: 8,  
+    11: 26,  
+    20: 29, 
+    17: 4, 
+    19: 7,   
+    27: 1,  
+    21: 9,   
+    28: 15   
 }
 
 class Game:
@@ -66,7 +64,7 @@ class Game:
                 self.status_label.config(text="Player 1's turn")
 
     def update_position(self, player_label, position):
-        # Calculate the x and y position based on the board's layout
+       
         x = 10 + (position % 10) * 40
         y = 350 - (position // 10) * 40
         self.canvas.coords(player_label, x, y, x + 20, y + 20)
